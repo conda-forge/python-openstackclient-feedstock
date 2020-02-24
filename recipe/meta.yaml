@@ -1,18 +1,18 @@
 {% set name = "python-openstackclient" %}
-{% set version = "4.0.0" %}
+{% set version = "5.0.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 3b11c423a38074b0b58ba66d5f6e5334759f50e99fe19c3dfc662a6299dc2e16
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: ec883c96ce7adf0f819f8a20b918d5ac8fad1f3ebed6d8a753b81b5ea98bac0c
 
 build:
   number: 0
-  noarch: "python"
-  script: "{{ PYTHON }} -m pip install . -vv"
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - openstack = openstackclient.shell:main
 
@@ -48,8 +48,8 @@ test:
 
 about:
   home: https://docs.openstack.org/python-openstackclient/latest/
-  license: "Apache-2.0"
-  license_family: "APACHE"
+  license: Apache-2.0
+  license_family: APACHE
   license_file: LICENSE
   summary: Client for OpenStack services
   doc_url: https://docs.openstack.org/python-openstackclient/latest/
