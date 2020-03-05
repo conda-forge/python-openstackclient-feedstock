@@ -20,7 +20,7 @@ requirements:
   host:
     - pbr
     - pip
-    - python
+    - python >3
     - setuptools
   run:
     - babel
@@ -31,7 +31,7 @@ requirements:
     - osc-lib
     - oslo.i18n
     - oslo.utils
-    - python
+    - python >3
     - python-cinderclient
     - python-glanceclient
     - python-keystoneclient
