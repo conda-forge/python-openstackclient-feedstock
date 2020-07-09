@@ -23,8 +23,8 @@ requirements:
     - python >3
     - setuptools
   run:
-    - cliff
-    - openstacksdk >=0.44.0
+    - cliff >2.9.0
+    - openstacksdk >=0.48.0
     - osc-lib >=2.0.0
     - oslo.i18n >=3.15.3
     - oslo.utils >=3.33.0
@@ -32,8 +32,8 @@ requirements:
     - python-keystoneclient >=3.22.0
     - python-novaclient >=15.1.0
     - python-cinderclient >=3.3.0
+    - stevedore >=2.0.1
     - setuptools
-    - six
 
 test:
   imports:
