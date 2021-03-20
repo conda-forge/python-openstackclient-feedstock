@@ -1,5 +1,5 @@
 {% set name = "python-openstackclient" %}
-{% set version = "5.4.0" %}
+{% set version = "5.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 21d228d600421ad5145f31178cdc8578df7d2e569f43381c654caae5a1993b67
+  sha256: 8d40491374172f9375ce1642ac2230b1cbb5a564320edbcc2a9ebe857fd9a880
 
 build:
   number: 0
@@ -20,17 +20,18 @@ requirements:
   host:
     - pbr
     - pip
-    - python >3
+    - python >=3.6
     - setuptools
   run:
-    - cliff >2.9.0
-    - openstacksdk >=0.48.0
-    - osc-lib >=2.0.0
+    - cliff >=3.5.0
+    - iso8601 >=0.1.11
+    - openstacksdk >=0.53.0
+    - osc-lib >=2.3.0
     - oslo.i18n >=3.15.3
     - oslo.utils >=3.33.0
-    - python >3
+    - python >=3.6
     - python-keystoneclient >=3.22.0
-    - python-novaclient >=15.1.0
+    - python-novaclient >=17.0.0
     - python-cinderclient >=3.3.0
     - stevedore >=2.0.1
     - setuptools
