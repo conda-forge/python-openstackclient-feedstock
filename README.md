@@ -1,11 +1,11 @@
-About python-openstackclient
-============================
+About python-openstackclient-feedstock
+======================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/python-openstackclient-feedstock/blob/main/LICENSE.txt)
 
 Home: https://docs.openstack.org/python-openstackclient/latest/
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/python-openstackclient-feedstock/blob/main/LICENSE.txt)
 
 Summary: Client for OpenStack services
 
