@@ -31,8 +31,8 @@ requirements:
     - oslo.i18n >=3.15.3
     - python-keystoneclient >=3.22.0
     - python-novaclient >=18.1.0
-    - python-cinderclient>=3.3.0
-    - stevedore>=2.0.1
+    - python-cinderclient >=3.3.0
+    - stevedore >=2.0.1
     - python >=3.8
     - setuptools
 
