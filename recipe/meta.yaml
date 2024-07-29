@@ -1,5 +1,5 @@
 {% set name = "python-openstackclient" %}
-{% set version = "6.6.0" %}
+{% set version = "6.6.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: bbef1ed34829c41052b2eca26480e29ca1f72be058d1430da5341ec44c4f295c
+  sha256: 23b486ecdf90d7388db91d1a89546e357fb92fd94a2ca8bfafe22ac8ec0196c4
 
 build:
   number: 0
@@ -22,7 +22,7 @@ requirements:
     - pip
     - python >=3.8
     - setuptools
-  run:    
+  run:
     - cryptography >=2.7
     - cliff >=3.5.0
     - iso8601 >=0.1.11
