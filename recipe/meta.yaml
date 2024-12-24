@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: eb9abe56b52726245b99bdfb539a6cd5196c052039809703c65c69049e44ca39
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -20,7 +20,7 @@ requirements:
   host:
     - pbr
     - pip
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools
   run:
     - cryptography >=2.7
@@ -33,10 +33,12 @@ requirements:
     - python-novaclient >=18.1.0
     - python-cinderclient >=3.3.0
     - stevedore >=2.0.1
-    - python >=3.8
+    - python >={{ python_min }}
     - setuptools
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - openstackclient
   commands:
