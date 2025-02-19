@@ -1,16 +1,16 @@
 {% set name = "python-openstackclient" %}
-{% set version = "7.2.1" %}
+{% set version = "7.3.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: eb9abe56b52726245b99bdfb539a6cd5196c052039809703c65c69049e44ca39
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 8df84100e53c8e7246bf07a177357f52d4086e05bcd7805d1a94666f42250e80
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
