@@ -1,5 +1,6 @@
 {% set name = "python-openstackclient" %}
-{% set version = "8.0.0" %}
+{% set version = "8.1.0" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 5b7a5e06893f833b5d296d019c50d42c7368e37748ee6be8e9b15655b999424e
+  sha256: 9b9c42b3f6bc4b4b480a6254fc560acb019787831e094396dbf9ac9ae571ae4b
 
 build:
   number: 0
