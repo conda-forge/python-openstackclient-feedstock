@@ -11,7 +11,7 @@ source:
   sha256: 6bcc2344d5dca9a4c4920998c0616eb82e9431e41033c91719247c72c61cca4d
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -27,12 +27,13 @@ requirements:
     - cryptography >=2.7
     - cliff >=3.5.0
     - iso8601 >=0.1.11
-    - openstacksdk >=2.0.0
+    - openstacksdk >=4.19.0
     - osc-lib >=2.3.0
     - oslo.i18n >=3.15.3
     - python-keystoneclient >=3.22.0
     - python-novaclient >=18.1.0
     - python-cinderclient >=3.3.0
+    - python-manilaclient
     - stevedore >=2.0.1
     - python >={{ python_min }}
     - setuptools
@@ -40,10 +41,12 @@ requirements:
 test:
   requires:
     - python {{ python_min }}
+    - pip
   imports:
     - openstackclient
   commands:
     - openstack --help
+    - pip check
 
 
 about:
